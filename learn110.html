@@ -1,0 +1,295 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Learn110: A website to practice math!</title>
+        <style>
+            body
+            {
+                font-family: "Verdana", sans-serif;
+                background: DeepSkyBlue;
+            }
+            .headerCard
+            {
+                padding: 75px;
+                background: Gold;
+                margin: 25px;
+                box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.3), 0 10px 25px 0 rgba(0, 0, 0, 0.2);
+            }
+            .bodyCard
+            {
+                float: left;
+                padding: 25px;
+                background: Gold;
+                margin: 25px;
+                height: 290px;
+                box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.3), 0 10px 25px 0 rgba(0, 0, 0, 0.2);
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="headerCard">
+            <h1 style="text-align: center">Learn110</h1>
+            <h3 style="text-align: center">A website to practice math!</h3>
+        </div>
+
+        <div class="bodyCard" style="width: 25%">
+            <h2>Addition: Level 1</h2>
+            <h3>Up to 10 + 10</h3>
+            <button type="button" onclick="startAddition1()">Generate Problem</button>
+            <p id="promptAddition1"></p>
+            <input id="answerInputAddition1">
+            <button type="button" onclick="getAnswerAddition1()">Enter</button>
+            <p id="resultAddition1"></p>
+            <p id="correctAnswersAddition1"></p>
+        </div>
+
+        <div class="bodyCard" style="width: 25%">
+            <h2>Addition: Level 2</h2>
+            <h3>Up to 20 + 20</h3>
+            <button type="button" onclick="startAddition2()">Generate Problem</button>
+            <p id="promptAddition2"></p>
+            <input id="answerInputAddition2">
+            <button type="button" onclick="getAnswerAddition2()">Enter</button>
+            <p id="resultAddition2"></p>
+            <p id="correctAnswersAddition2"></p>
+        </div>
+
+        <div class="bodyCard" style="width: 25%">
+            <h2>Addition: Level 3</h2>
+            <h3>Up to 100 + 100</h3>
+            <button type="button" onclick="startAddition3()">Generate Problem</button>
+            <p id="promptAddition3"></p>
+            <input id="answerInputAddition3">
+            <button type="button" onclick="getAnswerAddition3()">Enter</button>
+            <p id="resultAddition3"></p>
+            <p id="correctAnswersAddition3"></p>
+        </div>
+
+        <br>
+
+        <script>
+            var addition1_answer;
+            var addition1_numCorrect = 0;
+
+            function startAddition1()
+            {
+                window.alert("hi");
+                var addition1_num1, addition1_num2;
+                addition1_num1 = Math.floor(Math.random() * 10) + 1;
+                addition1_num2 = Math.floor(Math.random() * 10) + 1;
+                document.getElementById("promptAddition1").innerHTML = addition1_num1 + " + " + addition1_num2 + " = ";
+                addition1_answer = addition1_num1 + addition1_num2;
+                document.getElementById("answerInputAddition1").value = '';
+            }
+
+            function getAnswerAddition1()
+            {
+                var input = document.getElementById("answerInputAddition1").value;
+                if(input == addition1_answer)
+                {
+                    document.getElementById("resultAddition1").innerHTML = "Correct!";
+                    addition1_numCorrect++;
+                }
+                else
+                {
+                    document.getElementById("resultAddition1").innerHTML = "Wrong answer!";
+                }
+                document.getElementById("correctAnswersAddition1").innerHTML = addition1_numCorrect + " correct answer(s)";
+            }
+
+            var addition2_answer;
+            var addition2_numCorrect = 0;
+
+            function startAddition2()
+            {
+                var addition2_num1, addition2_num2;
+                addition2_num1 = Math.floor(Math.random() * 20) + 1;
+                addition2_num2 = Math.floor(Math.random() * 20) + 1;
+                document.getElementById("promptAddition2").innerHTML = addition2_num1 + " + " + addition2_num2 + " = ";
+                addition2_answer = addition2_num1 + addition2_num2;
+                document.getElementById("answerInputAddition2").value = '';
+            }
+
+            function getAnswerAddition2()
+            {
+                var input = document.getElementById("answerInputAddition2").value;
+                if(input == addition2_answer)
+                {
+                    document.getElementById("resultAddition2").innerHTML = "Correct!";
+                    addition2_numCorrect++;
+                }
+                else
+                {
+                    document.getElementById("resultAddition2").innerHTML = "Wrong answer!";
+                }
+                document.getElementById("correctAnswersAddition2").innerHTML = addition2_numCorrect + " correct answer(s)";
+            }
+
+            var addition3_answer;
+            var addition3_numCorrect = 0;
+
+            function startAddition3()
+            {
+                var addition3_num1, addition3_num2;
+                addition3_num1 = Math.floor(Math.random() * 100) + 1;
+                addition3_num2 = Math.floor(Math.random() * 100) + 1;
+                document.getElementById("promptAddition3").innerHTML = addition3_num1 + " + " + addition3_num2 + " = ";
+                addition3_answer = addition3_num1 + addition3_num2;
+                document.getElementById("answerInputAddition3").value = '';
+            }
+
+            function getAnswerAddition3()
+            {
+                var input = document.getElementById("answerInputAddition3").value;
+                if(input == addition3_answer)
+                {
+                    document.getElementById("resultAddition3").innerHTML = "Correct!";
+                    addition3_numCorrect++;
+                }
+                else
+                {
+                    document.getElementById("resultAddition3").innerHTML = "Wrong answer!";
+                }
+                document.getElementById("correctAnswersAddition3").innerHTML = addition3_numCorrect + " correct answer(s)";
+            }
+        </script>
+
+        <div class="bodyCard" style="width: 25%">
+            <h2>Subtraction: Level 1</h2>
+            <h3>Up to 10 - 10</h3>
+            <button type="button" onclick="startSubtraction1()">Generate Problem</button>
+            <p id="promptSubtraction1"></p>
+            <input id="answerInputSubtraction1">
+            <button type="button" onclick="getAnswerSubtraction1()">Enter</button>
+            <p id="resultSubtraction1"></p>
+            <p id="correctAnswersSubtraction1"></p>
+        </div>
+
+        <div class="bodyCard" style="width: 25%">
+            <h2>Subtraction: Level 2</h2>
+            <h3>Up to 20 - 20</h3>
+            <button type="button" onclick="startSubtraction2()">Generate Problem</button>
+            <p id="promptSubtraction2"></p>
+            <input id="answerInputSubtraction2">
+            <button type="button" onclick="getAnswerSubtraction2()">Enter</button>
+            <p id="resultSubtraction2"></p>
+            <p id="correctAnswersSubtraction2"></p>
+        </div>
+
+        <div class="bodyCard" style="width: 25%">
+            <h2>Subtraction: Level 3</h2>
+            <h3>Up to 100 - 100</h3>
+            <button type="button" onclick="startSubtraction3()">Generate Problem</button>
+            <p id="promptSubtraction3"></p>
+            <input id="answerInputSubtraction3">
+            <button type="button" onclick="getAnswerSubtraction3()">Enter</button>
+            <p id="resultSubtraction3"></p>
+            <p id="correctAnswersSubtraction3"></p>
+        </div>
+
+        <script>
+            var subtraction1_answer;
+            var subtraction1_numCorrect = 0;
+
+            function startSubtraction1()
+            {
+                var subtraction1_num1, subtraction1_num2;
+                subtraction1_num1 = Math.floor(Math.random() * 10) + 1;
+                subtraction1_num2 = Math.floor(Math.random() * 10) + 1;
+                if(subtraction1_num2 > subtraction1_num1)
+                {
+                    var temp = subtraction1_num2;
+                    subtraction1_num2 = subtraction1_num1;
+                    subtraction1_num1 = temp;
+                }
+                document.getElementById("promptSubtraction1").innerHTML = subtraction1_num1 + " - " + subtraction1_num2 + " = ";
+                subtraction1_answer = subtraction1_num1 - subtraction1_num2;
+                document.getElementById("answerInputSubtraction1").value = '';
+            }
+
+            function getAnswerSubtraction1()
+            {
+                var input = document.getElementById("answerInputSubtraction1").value;
+                if(input == subtraction1_answer)
+                {
+                    document.getElementById("resultSubtraction1").innerHTML = "Correct!";
+                    subtraction1_numCorrect++;
+                }
+                else
+                {
+                    document.getElementById("resultSubtraction1").innerHTML = "Wrong answer!";
+                }
+                document.getElementById("correctAnswersSubtraction1").innerHTML = subtraction1_numCorrect + " correct answer(s)";
+            }
+
+            var subtraction2_answer;
+            var subtraction2_numCorrect = 0;
+
+            function startSubtraction2()
+            {
+                var subtraction2_num1, subtraction2_num2;
+                subtraction2_num1 = Math.floor(Math.random() * 20) + 1;
+                subtraction2_num2 = Math.floor(Math.random() * 20) + 1;
+                if(subtraction2_num2 > subtraction2_num1)
+                {
+                    var temp = subtraction2_num2;
+                    subtraction2_num2 = subtraction2_num1;
+                    subtraction2_num1 = temp;
+                }
+                document.getElementById("promptSubtraction2").innerHTML = subtraction1_num1 + " - " + subtraction1_num2 + " = ";
+                subtraction2_answer = subtraction2_num1 - subtraction2_num2;
+                document.getElementById("answerInputSubtraction2").value = '';
+            }
+
+            function getAnswerSubtraction2()
+            {
+                var input = document.getElementById("answerInputSubtraction2").value;
+                if(input == subtraction2_answer)
+                {
+                    document.getElementById("resultSubtraction2").innerHTML = "Correct!";
+                    subtraction2_numCorrect++;
+                }
+                else
+                {
+                    document.getElementById("resultSubtraction2").innerHTML = "Wrong answer!";
+                }
+                document.getElementById("correctAnswersSubtraction2").innerHTML = subtraction2_numCorrect + " correct answer(s)";
+            }
+
+            var subtraction3_answer;
+            var subtraction3_numCorrect = 0;
+
+            function startSubtraction3()
+            {
+                var subtraction3_num1, subtraction3_num2;
+                subtraction3_num1 = Math.floor(Math.random() * 100) + 1;
+                subtraction3_num2 = Math.floor(Math.random() * 100) + 1;
+                if(subtraction3_num2 > subtraction3_num1)
+                {
+                    var temp = subtraction3_num2;
+                    subtraction3_num2 = subtraction3_num1;
+                    subtraction3_num1 = temp;
+                }
+                document.getElementById("promptSubtraction3").innerHTML = subtraction1_num1 + " - " + subtraction1_num2 + " = ";
+                subtraction3_answer = subtraction3_num1 - subtraction3_num2;
+                document.getElementById("answerInputSubtraction3").value = '';
+            }
+
+            function getAnswerSubtraction3()
+            {
+                var input = document.getElementById("answerInputSubtraction3").value;
+                if(input == subtraction3_answer)
+                {
+                    document.getElementById("resultSubtraction3").innerHTML = "Correct!";
+                    subtraction3_numCorrect++;
+                }
+                else
+                {
+                    document.getElementById("resultSubtraction3").innerHTML = "Wrong answer!";
+                }
+                document.getElementById("correctAnswersSubtraction3").innerHTML = subtraction3_numCorrect + " correct answer(s)";
+            }
+        </script>
+    </body>
+</html>
