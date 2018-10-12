@@ -11,7 +11,7 @@
             .headerCard
             {
                 padding: 75px;
-                background: Gold;
+                background: rgb(255, 191, 0);
                 margin: 25px;
                 box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.3), 0 10px 25px 0 rgba(0, 0, 0, 0.2);
             }
@@ -19,10 +19,27 @@
             {
                 float: left;
                 padding: 25px;
-                background: Gold;
+                background: rgb(255, 191, 0);
                 margin: 25px;
                 height: 290px;
                 box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.3), 0 10px 25px 0 rgba(0, 0, 0, 0.2);
+            }
+            .button
+            {
+                background-color: DodgerBlue;
+                border: none;
+                color: White;
+                padding: 8px 8px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 14px;
+                margin: 3px 2px;
+                cursor: pointer;
+            }
+            .paragraphSmallMargin
+            {
+                margin: 6px 0px;
             }
         </style>
     </head>
@@ -36,34 +53,34 @@
         <div class="bodyCard" style="width: 25%">
             <h2>Addition: Level 1</h2>
             <h3>Up to 10 + 10</h3>
-            <button type="button" onclick="startAddition1()">Generate Problem</button>
+            <button class="button" onclick="startAddition1()">Generate Problem</button>
             <p id="promptAddition1"></p>
             <input id="answerInputAddition1">
-            <button type="button" onclick="getAnswerAddition1()">Enter</button>
-            <p id="resultAddition1"></p>
-            <p id="correctAnswersAddition1"></p>
+            <button class="button" onclick="getAnswerAddition1()">Enter</button>
+            <p class="paragraphSmallMargin" id="resultAddition1"></p>
+            <p class="paragraphSmallMargin" id="correctAnswersAddition1"></p>
         </div>
 
         <div class="bodyCard" style="width: 25%">
             <h2>Addition: Level 2</h2>
             <h3>Up to 20 + 20</h3>
-            <button type="button" onclick="startAddition2()">Generate Problem</button>
+            <button class="button" onclick="startAddition2()">Generate Problem</button>
             <p id="promptAddition2"></p>
             <input id="answerInputAddition2">
-            <button type="button" onclick="getAnswerAddition2()">Enter</button>
-            <p id="resultAddition2"></p>
-            <p id="correctAnswersAddition2"></p>
+            <button class="button" onclick="getAnswerAddition2()">Enter</button>
+            <p class="paragraphSmallMargin" id="resultAddition2"></p>
+            <p class="paragraphSmallMargin" id="correctAnswersAddition2"></p>
         </div>
 
         <div class="bodyCard" style="width: 25%">
             <h2>Addition: Level 3</h2>
             <h3>Up to 100 + 100</h3>
-            <button type="button" onclick="startAddition3()">Generate Problem</button>
+            <button class="button" onclick="startAddition3()">Generate Problem</button>
             <p id="promptAddition3"></p>
             <input id="answerInputAddition3">
-            <button type="button" onclick="getAnswerAddition3()">Enter</button>
-            <p id="resultAddition3"></p>
-            <p id="correctAnswersAddition3"></p>
+            <button class="button" onclick="getAnswerAddition3()">Enter</button>
+            <p class="paragraphSmallMargin" id="resultAddition3"></p>
+            <p class="paragraphSmallMargin" id="correctAnswersAddition3"></p>
         </div>
 
         <br>
@@ -157,34 +174,34 @@
         <div class="bodyCard" style="width: 25%">
             <h2>Subtraction: Level 1</h2>
             <h3>Up to 10 - 10</h3>
-            <button type="button" onclick="startSubtraction1()">Generate Problem</button>
+            <button class="button" onclick="startSubtraction1()">Generate Problem</button>
             <p id="promptSubtraction1"></p>
             <input id="answerInputSubtraction1">
-            <button type="button" onclick="getAnswerSubtraction1()">Enter</button>
-            <p id="resultSubtraction1"></p>
-            <p id="correctAnswersSubtraction1"></p>
+            <button class="button" onclick="getAnswerSubtraction1()">Enter</button>
+            <p class="paragraphSmallMargin" id="resultSubtraction1"></p>
+            <p class="paragraphSmallMargin" id="correctAnswersSubtraction1"></p>
         </div>
 
         <div class="bodyCard" style="width: 25%">
             <h2>Subtraction: Level 2</h2>
             <h3>Up to 20 - 20</h3>
-            <button type="button" onclick="startSubtraction2()">Generate Problem</button>
+            <button class="button" onclick="startSubtraction2()">Generate Problem</button>
             <p id="promptSubtraction2"></p>
             <input id="answerInputSubtraction2">
-            <button type="button" onclick="getAnswerSubtraction2()">Enter</button>
-            <p id="resultSubtraction2"></p>
-            <p id="correctAnswersSubtraction2"></p>
+            <button class="button" onclick="getAnswerSubtraction2()">Enter</button>
+            <p class="paragraphSmallMargin" id="resultSubtraction2"></p>
+            <p class="paragraphSmallMargin" id="correctAnswersSubtraction2"></p>
         </div>
 
         <div class="bodyCard" style="width: 25%">
             <h2>Subtraction: Level 3</h2>
             <h3>Up to 100 - 100</h3>
-            <button type="button" onclick="startSubtraction3()">Generate Problem</button>
+            <button class="button" onclick="startSubtraction3()">Generate Problem</button>
             <p id="promptSubtraction3"></p>
             <input id="answerInputSubtraction3">
-            <button type="button" onclick="getAnswerSubtraction3()">Enter</button>
-            <p id="resultSubtraction3"></p>
-            <p id="correctAnswersSubtraction3"></p>
+            <button class="button" onclick="getAnswerSubtraction3()">Enter</button>
+            <p class="paragraphSmallMargin" id="resultSubtraction3"></p>
+            <p class="paragraphSmallMargin" id="correctAnswersSubtraction3"></p>
         </div>
 
         <script>
