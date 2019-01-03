@@ -88,9 +88,12 @@
         <script>
             var addition1_answer;
             var addition1_numCorrect = 0;
+            var addition1_problemGenerated = false; //Tracks whether a Level 1 Addition problem has been generated yet
 
+            //When the user wants to generate a problem in Level 1 Addition
             function startAddition1()
             {
+                addition1_problemGenerated = true;  //Indicate that a problem has been generated
                 var addition1_num1, addition1_num2;
                 addition1_num1 = Math.floor(Math.random() * 10) + 1;
                 addition1_num2 = Math.floor(Math.random() * 10) + 1;
@@ -99,19 +102,29 @@
                 document.getElementById("answerInputAddition1").value = '';
             }
 
+            //When the user submits an answer in Level 1 Addition
             function getAnswerAddition1()
             {
-                var input = document.getElementById("answerInputAddition1").value;
-                if(input == addition1_answer)
+                //If a problem has not yet been generated, print a message saying to generate a problem before submitting an answer
+                if(addition1_problemGenerated == false)
                 {
-                    document.getElementById("resultAddition1").innerHTML = "Correct!";
-                    addition1_numCorrect++;
+                    document.getElementById("resultAddition1").innerHTML = "Generate a problem before submitting an answer!";
                 }
+                //If a problem has been generated, get the user's answer and check to see if it is correct and report accordingly
                 else
                 {
-                    document.getElementById("resultAddition1").innerHTML = "Wrong answer!";
+                    var input = document.getElementById("answerInputAddition1").value;
+                    if(input == addition1_answer)
+                    {
+                        document.getElementById("resultAddition1").innerHTML = "Correct!";
+                        addition1_numCorrect++;
+                    }
+                    else
+                    {
+                        document.getElementById("resultAddition1").innerHTML = "Wrong answer!";
+                    }
+                    document.getElementById("correctAnswersAddition1").innerHTML = addition1_numCorrect + " correct answer(s)";
                 }
-                document.getElementById("correctAnswersAddition1").innerHTML = addition1_numCorrect + " correct answer(s)";
             }
 
             var addition2_answer;
