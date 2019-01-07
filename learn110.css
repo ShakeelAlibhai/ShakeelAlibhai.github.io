@@ -1,0 +1,42 @@
+body
+{
+    font-family: "Verdana", sans-serif;
+    background: DeepSkyBlue;
+}
+
+.headerCard
+{
+    padding: 75px;
+    background: rgb(255, 191, 0);
+    margin: 25px;
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.3), 0 10px 25px 0 rgba(0, 0, 0, 0.2);
+}
+
+.bodyCard
+{
+    float: left;
+    padding: 25px;
+    background: rgb(255, 191, 0);
+    margin: 25px;
+    height: 290px;
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.3), 0 10px 25px 0 rgba(0, 0, 0, 0.2);
+}
+
+.button
+{
+    background-color: DodgerBlue;
+    border: none;
+    color: White;
+    padding: 8px 8px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin: 3px 2px;
+    cursor: pointer;
+}
+
+.paragraphSmallMargin
+{
+    margin: 6px 0px;
+}
