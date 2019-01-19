@@ -188,6 +188,7 @@
 
             var addition3_answer;
             var addition3_numCorrect = 0;
+            var addition3_problemGenerated = false; //Tracks whether a Level 3 Addition problem has been generated yet
 
             //When the user wants to generate a problem in Level 3 Addition
             function startAddition3()
@@ -198,22 +199,32 @@
                 document.getElementById("promptAddition3").innerHTML = addition3_num1 + " + " + addition3_num2 + " = ";
                 addition3_answer = addition3_num1 + addition3_num2;
                 document.getElementById("answerInputAddition3").value = '';
+                addition3_problemGenerated = true;  //Indicate that a problem has been generated
             }
 
             //When the user submits an answer in Level 3 Addition
             function getAnswerAddition3()
             {
-                var input = document.getElementById("answerInputAddition3").value;
-                if(input == addition3_answer)
+                //If a problem has not yet been generated, print a message saying to generate a problem before submitting an answer
+                if(addition3_problemGenerated == false)
                 {
-                    document.getElementById("resultAddition3").innerHTML = "Correct!";
-                    addition3_numCorrect++;
+                    document.getElementById("resultAddition3").innerHTML = "Generate a problem before submitting an answer!";
                 }
+                //If a problem has been generated, get the user's answer and check to see if it is correct and report accordingly
                 else
                 {
-                    document.getElementById("resultAddition3").innerHTML = "Wrong answer!";
+                    var input = document.getElementById("answerInputAddition3").value;
+                    if(input == addition3_answer)
+                    {
+                        document.getElementById("resultAddition3").innerHTML = "Correct!";
+                        addition3_numCorrect++;
+                    }
+                    else
+                    {
+                        document.getElementById("resultAddition3").innerHTML = "Wrong answer!";
+                    }
+                    document.getElementById("correctAnswersAddition3").innerHTML = addition3_numCorrect + " correct answer(s)";
                 }
-                document.getElementById("correctAnswersAddition3").innerHTML = addition3_numCorrect + " correct answer(s)";
             }
         </script>
 
