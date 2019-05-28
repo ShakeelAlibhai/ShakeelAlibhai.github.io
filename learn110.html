@@ -267,6 +267,7 @@
         <script>
             var subtraction1_answer;
             var subtraction1_numCorrect = 0;
+            var subtraction1_problemGenerated = false; //Tracks whether a Level 1 Subtraction problem has been generated yet
 
             //When the user wants to generate a problem in Level 1 Subtraction
             function startSubtraction1()
@@ -288,17 +289,25 @@
             //When the user submits an answer in Level 1 Subtraction
             function getAnswerSubtraction1()
             {
-                var input = document.getElementById("answerInputSubtraction1").value;
-                if(input == subtraction1_answer)
+                //If a problem has not yet been generated, print a message saying to generate a problem before submitting an answer
+                if(subtraction1_problemGenerated == false)
                 {
-                    document.getElementById("resultSubtraction1").innerHTML = "Correct!";
-                    subtraction1_numCorrect++;
+                    document.getElementById("resultSubtraction1").innerHTML = "Generate a problem before submitting an answer!";
                 }
                 else
                 {
-                    document.getElementById("resultSubtraction1").innerHTML = "Wrong answer!";
+                    var input = document.getElementById("answerInputSubtraction1").value;
+                    if(input == subtraction1_answer)
+                    {
+                        document.getElementById("resultSubtraction1").innerHTML = "Correct!";
+                        subtraction1_numCorrect++;
+                    }
+                    else
+                    {
+                        document.getElementById("resultSubtraction1").innerHTML = "Wrong answer!";
+                    }
+                    document.getElementById("correctAnswersSubtraction1").innerHTML = subtraction1_numCorrect + " correct answer(s)";
                 }
-                document.getElementById("correctAnswersSubtraction1").innerHTML = subtraction1_numCorrect + " correct answer(s)";
             }
 
             var subtraction2_answer;
